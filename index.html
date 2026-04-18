@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Companion💔💔</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f4f6fa;
+            font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        /* главная карточка-контейнер */
+        .links-container {
+            max-width: 700px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 2rem;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.02);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        /* шапка с лёгким намёком на ретро/техно */
+        .header {
+            background: #0b1120;
+            padding: 2rem 2rem 1.8rem;
+            text-align: center;
+            color: #eef2ff;
+        }
+
+        .header h1 {
+            font-size: 1.9rem;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            background: linear-gradient(135deg, #d9e2ff, #a5b9ff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 0.4rem;
+        }
+
+        /* список ссылок — акцент на чистоту и удобство */
+        .link-list {
+            padding: 1.8rem 2rem 2.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        /* каждая ссылка — как живая кнопка */
+        .link-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #f8fafc;
+            border-radius: 1.5rem;
+            padding: 0.9rem 1.5rem;
+            transition: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            border: 1px solid #e2edff;
+            text-decoration: none;
+        }
+
+        .link-card:hover {
+            background: #ffffff;
+            border-color: #bdd4ff;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 22px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* левая часть: иконка + название */
+        .link-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .link-icon {
+            font-size: 2rem;
+            width: 2.8rem;
+            text-align: center;
+            filter: drop-shadow(0 2px 2px rgba(0,0,0,0.05));
+        }
+
+        .link-title {
+            font-weight: 620;
+            font-size: 1.2rem;
+            color: #0a1c3a;
+            letter-spacing: -0.2px;
+        }
+
+        .link-domain {
+            font-size: 0.7rem;
+            font-family: monospace;
+            color: #5b6e8c;
+            margin-top: 0.2rem;
+        }
+
+        /* стрелка вправо */
+        .link-arrow {
+            color: #2c3e66;
+            font-size: 1.5rem;
+            font-weight: 300;
+            transition: transform 0.2s;
+        }
+
+        .link-card:hover .link-arrow {
+            transform: translateX(5px);
+        }
+
+        /* небольшая зона с подписью / футер */
+        .footer-note {
+            background: #f1f5f9;
+            padding: 1rem 2rem;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #4b556b;
+            border-top: 1px solid #e0e9f2;
+            font-family: monospace;
+        }
+
+        .footer-note a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        @media (max-width: 520px) {
+            .link-list {
+                padding: 1.3rem;
+            }
+            .link-card {
+                padding: 0.7rem 1rem;
+            }
+            .link-title {
+                font-size: 1rem;
+            }
+            .header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="links-container">
+        <div class="header">
+            <h1>⚡ instant links</h1>
+        </div>
+
+        <div class="link-list">
+            <!-- 1. collab-vm / computernewb -->
+            <a href="https://computernewb.com/collab-vm/" target="_blank" rel="noopener noreferrer" class="link-card">
+                <div class="link-info">
+                    <div class="link-icon">🖥️</div>
+                    <div>
+                        <div class="link-title">Collab VM</div>
+                        <div class="link-domain">computernewb.com/collab-vm</div>
+                    </div>
+                </div>
+                <div class="link-arrow">→</div>
+            </a>
+
+            <!-- 2. Geometry Dash Official -->
+            <a href="https://geometrydash.com/" target="_blank" rel="noopener noreferrer" class="link-card">
+                <div class="link-info">
+                    <div class="link-icon">🎮</div>
+                    <div>
+                        <div class="link-title">Geometry Dash</div>
+                        <div class="link-domain">geometrydash.com</div>
+                    </div>
+                </div>
+                <div class="link-arrow">→</div>
+            </a>
+
+            <!-- 3. dmitry.gr — легендарный блог / проекты -->
+            <a href="https://dmitry.gr/" target="_blank" rel="noopener noreferrer" class="link-card">
+                <div class="link-info">
+                    <div class="link-icon">🧩</div>
+                    <div>
+                        <div class="link-title">dmitry.gr</div>
+                        <div class="link-domain">dmitry.gr — проекты, Linux на 4004, ARM-эмуляторы</div>
+                    </div>
+                </div>
+                <div class="link-arrow">→</div>
+            </a>
+        </div>
+
+        <div class="footer-note">
+            <span>▼ direct links or sumthing idfk</span>
+        </div>
+    </div>
+</body>
+</html>
